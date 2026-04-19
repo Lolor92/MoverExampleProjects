@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MoverMassIntegration.cpp.obj": [
+			"MoverMassAgentTraits.gen.cpp.obj",
+			"MoverMassIntegration.init.gen.cpp.obj",
+			"MoverMassTranslators.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"MoverMassAgentTraits.cpp.obj",
+			"MoverMassIntegration.cpp.obj",
+			"MoverMassTranslators.cpp.obj"
+		]
+	}
+}

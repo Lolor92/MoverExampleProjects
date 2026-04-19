@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\ue 5.6.1\\engine\\plugins\\experimental\\moverintegrations\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\moverintegrations\\module.moverintegrations.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\ue 5.6.1\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
+        "Includes": [
+            "d:\\ue 5.6.1\\engine\\plugins\\experimental\\moverintegrations\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\moverintegrations\\definitions.moverintegrations.h",
+            "d:\\ue 5.6.1\\engine\\plugins\\experimental\\moverintegrations\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\moverintegrations\\permoduleinline.gen.cpp",
+            "d:\\ue 5.6.1\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl",
+            "d:\\ue 5.6.1\\engine\\plugins\\experimental\\moverintegrations\\source\\moverintegrations\\private\\moverintegrations.cpp",
+            "d:\\ue 5.6.1\\engine\\plugins\\experimental\\moverintegrations\\source\\moverintegrations\\public\\moverintegrations.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

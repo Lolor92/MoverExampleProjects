@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-MoverCVDEditor.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"../Intermediate/Build/Win64/x64/UnrealEditor/Development/UnrealEd/SharedPCH.UnrealEd.Cpp20.h.obj"
+"../Plugins/Experimental/Mover/Intermediate/Build/Win64/x64/UnrealEditor/Development/MoverCVDEditor/Module.MoverCVDEditor.cpp.obj"
+"../Intermediate/Build/Win64/x64/UnrealEditor/Development/Default.rc2.res"
+/OUT:"../Plugins/Experimental/Mover/Intermediate/Build/Win64/x64/UnrealEditor/Development/MoverCVDEditor/UnrealEditor-MoverCVDEditor.lib"

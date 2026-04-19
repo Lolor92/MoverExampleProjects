@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MoverCVDData.cpp.obj": [
+			"MoverCVDData.init.gen.cpp.obj",
+			"MoverCVDDataWrappers.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"MoverCVDData.cpp.obj",
+			"MoverCVDDataWrappers.cpp.obj"
+		]
+	}
+}

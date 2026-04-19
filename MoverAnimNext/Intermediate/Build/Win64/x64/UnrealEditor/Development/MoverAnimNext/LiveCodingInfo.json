@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MoverAnimNext.cpp.obj": [
+			"MoverAnimNext.init.gen.cpp.obj",
+			"RigUnit_GenerateMoverTrajectory.gen.cpp.obj",
+			"RigUnit_TrajectoryAnalysis.gen.cpp.obj",
+			"RigVMTrait_ModuleEventDependency_MoverComponentTickFunctions.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"RigUnit_GenerateMoverTrajectory.cpp.obj",
+			"RigUnit_TrajectoryAnalysis.cpp.obj",
+			"RigVMTrait_ModuleEventDependency_MoverComponentTickFunctions.cpp.obj",
+			"MoverAnimNextModule.cpp.obj"
+		]
+	}
+}

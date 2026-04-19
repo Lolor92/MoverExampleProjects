@@ -1,0 +1,18 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MoverCVDEditor.cpp.obj": [
+			"MoverCVDEditor.init.gen.cpp.obj",
+			"MoverCVDSimDataComponent.gen.cpp.obj",
+			"MoverCVDSimDataSettings.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"MoverCVDEditor.cpp.obj",
+			"MoverCVDExtension.cpp.obj",
+			"MoverCVDSimDataComponent.cpp.obj",
+			"MoverCVDSimDataProcessor.cpp.obj",
+			"MoverCVDSimDataSettings.cpp.obj",
+			"MoverCVDStyle.cpp.obj",
+			"MoverCVDTab.cpp.obj"
+		]
+	}
+}

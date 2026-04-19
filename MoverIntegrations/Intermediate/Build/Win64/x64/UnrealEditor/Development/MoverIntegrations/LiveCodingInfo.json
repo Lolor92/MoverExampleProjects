@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MoverIntegrations.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
+			"MoverIntegrations.cpp.obj"
+		]
+	}
+}

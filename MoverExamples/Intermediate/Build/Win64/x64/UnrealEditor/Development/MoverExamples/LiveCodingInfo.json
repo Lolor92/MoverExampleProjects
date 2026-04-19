@@ -1,0 +1,24 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MoverExamples.cpp.obj": [
+			"AbilityInputs.gen.cpp.obj",
+			"MoverExamples.init.gen.cpp.obj",
+			"MoverExamplesCharacter.gen.cpp.obj",
+			"MoverExamplesGameMode.gen.cpp.obj",
+			"MoverExamplesGameState.gen.cpp.obj",
+			"MoverExamplesPhysicsCharacterMoverComponent.gen.cpp.obj",
+			"ZiplineInterface.gen.cpp.obj",
+			"ZipliningTransitions.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"MoverExamplesPhysicsCharacterMoverComponent.cpp.obj",
+			"ZipliningMode.cpp.obj",
+			"ZipliningTransitions.cpp.obj",
+			"FollowPathMode.cpp.obj",
+			"FollowSplineMode.cpp.obj",
+			"MoverExamplesCharacter.cpp.obj",
+			"MoverExamplesGameMode.cpp.obj",
+			"MoverExamplesModule.cpp.obj"
+		]
+	}
+}

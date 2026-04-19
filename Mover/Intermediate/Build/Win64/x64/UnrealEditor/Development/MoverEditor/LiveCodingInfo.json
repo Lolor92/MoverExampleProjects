@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MoverEditor.cpp.obj": [
+			"K2Node_PlayMontageOnMoverActor.gen.cpp.obj",
+			"MoverEditor.init.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"K2Node_PlayMontageOnMoverActor.cpp.obj",
+			"MoverEditorModule.cpp.obj"
+		]
+	}
+}

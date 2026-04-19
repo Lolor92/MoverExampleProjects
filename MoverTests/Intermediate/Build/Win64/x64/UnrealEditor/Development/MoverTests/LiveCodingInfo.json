@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MoverTests.cpp.obj": [
+			"MoverTests.init.gen.cpp.obj",
+			"TestCustomLayeredMoves.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"MoverTests.cpp.obj",
+			"TestCustomLayeredMoves.cpp.obj"
+		]
+	}
+}

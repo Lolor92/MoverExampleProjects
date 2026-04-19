@@ -1,0 +1,17 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Mover.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"../Intermediate/Build/Win64/x64/UnrealEditor/Development/UnrealEd/SharedPCH.UnrealEd.Cpp20.h.obj"
+"../Plugins/Experimental/Mover/Intermediate/Build/Win64/x64/UnrealEditor/Development/Mover/Module.Mover.1.cpp.obj"
+"../Plugins/Experimental/Mover/Intermediate/Build/Win64/x64/UnrealEditor/Development/Mover/Module.Mover.2.cpp.obj"
+"../Plugins/Experimental/Mover/Intermediate/Build/Win64/x64/UnrealEditor/Development/Mover/Module.Mover.3.cpp.obj"
+"../Plugins/Experimental/Mover/Intermediate/Build/Win64/x64/UnrealEditor/Development/Mover/Module.Mover.4.cpp.obj"
+"../Plugins/Experimental/Mover/Intermediate/Build/Win64/x64/UnrealEditor/Development/Mover/Module.Mover.5.cpp.obj"
+"../Plugins/Experimental/Mover/Intermediate/Build/Win64/x64/UnrealEditor/Development/Mover/Module.Mover.6.cpp.obj"
+"../Intermediate/Build/Win64/x64/UnrealEditor/Development/Default.rc2.res"
+/OUT:"../Plugins/Experimental/Mover/Intermediate/Build/Win64/x64/UnrealEditor/Development/Mover/UnrealEditor-Mover.lib"
