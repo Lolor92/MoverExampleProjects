@@ -100,7 +100,7 @@ void APL_BasePawn::PostInitializeComponents()
 void APL_BasePawn::ProduceInput_Implementation(int32 SimTimeMs, FMoverInputCmdContext& InputCmdResult)
 {
 	FCharacterDefaultInputs& CharacterInputs =
-			InputCmdResult.InputCollection.FindOrAddMutableDataByType<FCharacterDefaultInputs>();
+		InputCmdResult.InputCollection.FindOrAddMutableDataByType<FCharacterDefaultInputs>();
 
 	CharacterInputs.OrientationIntent = FVector::ZeroVector;
 
@@ -118,9 +118,11 @@ void APL_BasePawn::ProduceInput_Implementation(int32 SimTimeMs, FMoverInputCmdCo
 	CharacterInputs.ControlRotation = ControlRotation;
 	CharacterInputs.SetMoveInput(EMoveInputType::DirectionalIntent, WorldMoveIntent);
 
+	// Strafe:
+	// move based on camera yaw, but face camera yaw only while actually moving
 	if (WorldMoveIntent.SizeSquared2D() > 0.01f)
 	{
-		CharacterInputs.OrientationIntent = WorldMoveIntent.GetSafeNormal2D();
+		CharacterInputs.OrientationIntent = YawRotation.Vector();
 	}
 }
 
