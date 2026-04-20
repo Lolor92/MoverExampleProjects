@@ -100,7 +100,9 @@ void APL_BasePawn::PostInitializeComponents()
 void APL_BasePawn::ProduceInput_Implementation(int32 SimTimeMs, FMoverInputCmdContext& InputCmdResult)
 {
 	FCharacterDefaultInputs& CharacterInputs =
-		InputCmdResult.InputCollection.FindOrAddMutableDataByType<FCharacterDefaultInputs>();
+			InputCmdResult.InputCollection.FindOrAddMutableDataByType<FCharacterDefaultInputs>();
+
+	CharacterInputs.OrientationIntent = FVector::ZeroVector;
 
 	APlayerController* PC = Cast<APlayerController>(GetController());
 	if (!PC)
@@ -116,9 +118,9 @@ void APL_BasePawn::ProduceInput_Implementation(int32 SimTimeMs, FMoverInputCmdCo
 	CharacterInputs.ControlRotation = ControlRotation;
 	CharacterInputs.SetMoveInput(EMoveInputType::DirectionalIntent, WorldMoveIntent);
 
-	if (!WorldMoveIntent.IsNearlyZero())
+	if (WorldMoveIntent.SizeSquared2D() > 0.01f)
 	{
-		CharacterInputs.OrientationIntent = WorldMoveIntent.GetSafeNormal();
+		CharacterInputs.OrientationIntent = WorldMoveIntent.GetSafeNormal2D();
 	}
 }
 
@@ -169,13 +171,9 @@ void APL_BasePawn::ApplyConfiguredMovementSettings()
 
 	if (!RuntimeMovementSettings) return;
 	
-	/*RuntimeMovementSettings->MaxSpeed = MovementSettings->MaxSpeed;
-	RuntimeMovementSettings->bUseAccelerationForVelocityMove = MovementSettings->bUseAccelerationForVelocityMove;
-	RuntimeMovementSettings->GroundFriction = MovementSettings->GroundFriction;
-	RuntimeMovementSettings->Deceleration = MovementSettings->Deceleration;
-	RuntimeMovementSettings->Acceleration = MovementSettings->Acceleration;
-	RuntimeMovementSettings->TurningRate = MovementSettings->TurningRate;
-	RuntimeMovementSettings->TurningBoost = MovementSettings->TurningBoost;
-	RuntimeMovementSettings->JumpUpwardsSpeed = MovementSettings->JumpUpwardsSpeed;*/
-	
+	RuntimeMovementSettings->MaxSpeed = 400.f;
+	RuntimeMovementSettings->Acceleration = 4000.f;
+	RuntimeMovementSettings->Deceleration = 4000.f;
+	RuntimeMovementSettings->TurningRate = 1200.f;
+	RuntimeMovementSettings->TurningBoost = 2.f;
 }
