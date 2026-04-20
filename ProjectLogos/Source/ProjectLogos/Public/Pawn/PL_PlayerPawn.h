@@ -1,22 +1,33 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "Pawn/PL_BasePawn.h"
 #include "PL_PlayerPawn.generated.h"
 
+class USpringArmComponent;
+class UCameraComponent;
+class UPL_InputComponent;
+
 UCLASS()
-class PROJECTLOGOS_API APL_PlayerPawn : public APawn
+class PROJECTLOGOS_API APL_PlayerPawn : public APL_BasePawn
 {
 	GENERATED_BODY()
 
 public:
 	APL_PlayerPawn();
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void OnRep_PlayerState() override;
 
 protected:
-	virtual void BeginPlay() override;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	TObjectPtr<USpringArmComponent> SpringArmComponent = nullptr;
 
-public:	
-	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	TObjectPtr<UCameraComponent> CameraComponent = nullptr;
 
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Input")
+	TObjectPtr<UPL_InputComponent> PawnInputComponent = nullptr;
+	
+private:
+	void InitializeAbilitySystemFromPlayerState();
 };
