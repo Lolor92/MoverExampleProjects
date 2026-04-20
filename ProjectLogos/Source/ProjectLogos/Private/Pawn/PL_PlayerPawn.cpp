@@ -20,7 +20,7 @@ APL_PlayerPawn::APL_PlayerPawn()
 
 	PawnInputComponent = CreateDefaultSubobject<UPL_InputComponent>(TEXT("PawnInputComponent"));
 	
-	bUseControllerRotationYaw = true;
+	bUseControllerRotationYaw = false;
 }
 
 void APL_PlayerPawn::PossessedBy(AController* NewController)

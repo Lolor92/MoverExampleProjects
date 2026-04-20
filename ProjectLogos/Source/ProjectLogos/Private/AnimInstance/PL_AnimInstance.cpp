@@ -1,6 +1,5 @@
 #include "AnimInstance/PL_AnimInstance.h"
 #include "DefaultMovementSet/CharacterMoverComponent.h"
-#include "Kismet/KismetMathLibrary.h"
 
 
 void UPL_AnimInstance::NativeInitializeAnimation()
@@ -36,35 +35,18 @@ void UPL_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 	if (Velocity.IsNearlyZero())
 	{
-		SmoothedMovementOffsetYaw = FMath::FInterpTo(
-			SmoothedMovementOffsetYaw,
-			0.f,
-			DeltaSeconds,
-			8.f
-		);
-
-		MovementOffsetYaw = SmoothedMovementOffsetYaw;
+		MovementOffsetYaw = 0.f;
 		return;
 	}
 
 	MovementRotation = Velocity.ToOrientationRotator();
-
-	const float TargetOffsetYaw =
-		UKismetMathLibrary::NormalizedDeltaRotator(MovementRotation, AimRotation).Yaw;
-
-	SmoothedMovementOffsetYaw = FMath::FInterpTo(
-		SmoothedMovementOffsetYaw,
-		TargetOffsetYaw,
-		DeltaSeconds,
-		8.f
-	);
-
-	MovementOffsetYaw = SmoothedMovementOffsetYaw;
+	MovementOffsetYaw = FMath::FindDeltaAngleDegrees(AimRotation.Yaw, MovementRotation.Yaw);
 }
 
 bool UPL_AnimInstance::IsInAir() const
 {
 	if (!CharacterMoverComponent) return false;
 
-	return CharacterMoverComponent->HasGameplayTag(FGameplayTag::RequestGameplayTag(TEXT("Mover.IsInAir")), true);
+	return CharacterMoverComponent->HasGameplayTag(
+		FGameplayTag::RequestGameplayTag(TEXT("Mover.IsInAir")), true);
 }

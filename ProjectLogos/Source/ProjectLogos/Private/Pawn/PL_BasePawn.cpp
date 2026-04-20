@@ -118,8 +118,7 @@ void APL_BasePawn::ProduceInput_Implementation(int32 SimTimeMs, FMoverInputCmdCo
 
 	if (!WorldMoveIntent.IsNearlyZero())
 	{
-		const FVector FacingDirection = YawRotation.Vector();
-		CharacterInputs.OrientationIntent = FacingDirection;
+		CharacterInputs.OrientationIntent = WorldMoveIntent.GetSafeNormal();
 	}
 }
 

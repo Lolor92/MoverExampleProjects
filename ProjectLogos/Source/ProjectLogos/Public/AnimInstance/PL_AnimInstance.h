@@ -44,9 +44,6 @@ private:
 	UPROPERTY(BlueprintReadOnly, Category="Anim|Movement", meta=(AllowPrivateAccess="true"))
 	float MovementOffsetYaw = 0.f;
 	
-	UPROPERTY(BlueprintReadOnly, Category="Anim|Movement", meta=(AllowPrivateAccess="true"))
-	float SmoothedMovementOffsetYaw = 0.f;
-	
 	UPROPERTY()
 	UCharacterMoverComponent* CharacterMoverComponent = nullptr;
 	
