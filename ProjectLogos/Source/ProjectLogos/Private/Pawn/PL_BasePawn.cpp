@@ -91,9 +91,19 @@ void APL_BasePawn::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
 
-	if (CharacterMoverComponent && CapsuleComponent)
+	if (!CharacterMoverComponent) return;
+
+	if (CapsuleComponent)
 	{
 		CharacterMoverComponent->SetUpdatedComponent(CapsuleComponent.Get());
+	}
+
+	if (MeshComponent)
+	{
+		CharacterMoverComponent->SetPrimaryVisualComponent(MeshComponent.Get());
+
+		// Set this in editor if you prefer, but the idea is:
+		// Smoothing Mode = Visual Component Offset
 	}
 }
 
@@ -176,6 +186,6 @@ void APL_BasePawn::ApplyConfiguredMovementSettings()
 	RuntimeMovementSettings->MaxSpeed = 400.f;
 	RuntimeMovementSettings->Acceleration = 4000.f;
 	RuntimeMovementSettings->Deceleration = 4000.f;
-	RuntimeMovementSettings->TurningRate = 720.f;
-	RuntimeMovementSettings->TurningBoost = 8.f;
+	RuntimeMovementSettings->TurningRate = 1200.f;
+	RuntimeMovementSettings->TurningBoost = 2.f;
 }
